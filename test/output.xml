@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4 (Python 3.11.9 on win32)" generated="2025-12-24T02:50:33.545678" rpa="false" schemaversion="5">
+<suite id="s1" name="Hp Test" source="C:\Users\cmit\Pictures\Robot\test\hp_test.robot">
+<test id="s1-t1" name="Open HP Application" line="6">
+<kw name="Open Hp Application" owner="myhp_robot">
+<msg time="2025-12-24T02:50:43.312890" level="INFO">Open HP Application result: True</msg>
+<msg time="2025-12-24T02:50:43.312890" level="INFO">[PASS] Open Application:</msg>
+<msg time="2025-12-24T02:50:43.312890" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Open the HP application.</doc>
+<status status="PASS" start="2025-12-24T02:50:33.994239" elapsed="9.318651"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Failed to open HP application</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-24T02:50:43.317736" elapsed="0.000000"/>
+</kw>
+<doc>Open the HP application</doc>
+<status status="PASS" start="2025-12-24T02:50:33.994239" elapsed="9.323497"/>
+</test>
+<test id="s1-t2" name="Connect To HP Application" line="11">
+<kw name="Connect To Application" owner="myhp_robot">
+<msg time="2025-12-24T02:50:48.608410" level="INFO">Connect to Application result: True</msg>
+<msg time="2025-12-24T02:50:48.608410" level="INFO">[INFO] Detected HP-related windows:
+   - HP
+
+[INFO] Connecting to window: HP
+[PASS] Connect to Application: Connected to: HP</msg>
+<msg time="2025-12-24T02:50:48.608410" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Connect to the HP application.</doc>
+<status status="PASS" start="2025-12-24T02:50:43.324676" elapsed="5.283734"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Failed to connect to HP application</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-24T02:50:48.620090" elapsed="0.002021"/>
+</kw>
+<doc>Connect to the HP application</doc>
+<status status="PASS" start="2025-12-24T02:50:43.317736" elapsed="5.311861"/>
+</test>
+<test id="s1-t3" name="Navigate To Audio Section" line="16">
+<kw name="Navigate To Audio" owner="myhp_robot">
+<msg time="2025-12-24T02:51:05.733463" level="INFO">Navigate to Audio result: True</msg>
+<msg time="2025-12-24T02:51:05.733463" level="INFO">[PASS] Navigate to audio page:</msg>
+<msg time="2025-12-24T02:51:05.733463" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Navigate to Audio section.</doc>
+<status status="PASS" start="2025-12-24T02:50:48.699039" elapsed="17.034424"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Failed to navigate to Audio</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-24T02:51:05.735249" elapsed="0.000000"/>
+</kw>
+<doc>Navigate to Audio section</doc>
+<status status="PASS" start="2025-12-24T02:50:48.659438" elapsed="17.075811"/>
+</test>
+<test id="s1-t4" name="Verify Carousel Apps" line="21">
+<kw name="Verify Carousel Apps" owner="myhp_robot">
+<msg time="2025-12-24T02:51:06.611431" level="INFO">All required carousel apps are present</msg>
+<msg time="2025-12-24T02:51:06.611431" level="INFO">[PASS] Administrative Tools: 'Administrative Tools' present in carousel/Appbar
+[PASS] Calculator: 'Calculator' present in carousel/Appbar
+[PASS] Calendar: 'Calendar' present in carousel/Appbar
+[PASS] Command Prompt: 'Command Prompt' present in carousel/Appbar
+[PASS] Copilot: 'Copilot' present in carousel/Appbar</msg>
+<msg time="2025-12-24T02:51:06.611431" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Verify carousel apps in HP application.</doc>
+<status status="PASS" start="2025-12-24T02:51:05.735249" elapsed="0.876182"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Carousel apps verification failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-24T02:51:06.611431" elapsed="0.000000"/>
+</kw>
+<doc>Verify all required carousel apps are present</doc>
+<status status="PASS" start="2025-12-24T02:51:05.735249" elapsed="0.885530"/>
+</test>
+<test id="s1-t5" name="Delete App From Carousel" line="26">
+<kw name="Del App" owner="myhp_robot">
+<msg time="2025-12-24T02:51:06.621679" level="INFO">Starting app deletion workflow...</msg>
+<msg time="2025-12-24T02:51:54.626566" level="INFO">App deletion workflow completed successfully</msg>
+<msg time="2025-12-24T02:51:54.626566" level="INFO">[PASS] Connect to Application: Connected to: HP
+[DEBUG] Starting delete workflow...
+[PASS] Clicked App: App: Administrative Tools
+[PASS] Delete Profile: Delete profile clicked
+[PASS] Popup Continue: Continue clicked
+[PASS] Clicked App: App: Calculator
+[PASS] Delete Profile: Delete profile clicked
+[PASS] Popup Checkbox: Checkbox selected
+[PASS] Popup Continue: Continue clicked
+[PASS] Clicked App: App: Calendar
+[PASS] Delete Profile: Delete profile clicked
+[PASS] Popup Verification: No popup appeared as expected.
+[DEBUG] Deleting remaining apps in carousel...
+[PASS] Delete Profile: Delete profile clicked
+[FAIL] Popup Continue: Continue button not found
+[PASS] Cleanup Delete: Deleted remaining app: Command Prompt
+[PASS] Delete Profile: Delete profile clicked
+[FAIL] Popup Continue: Continue button not found
+[PASS] Cleanup Delete: Deleted remaining app: Copilot
+[DEBUG] Delete workflow completed.</msg>
+<msg time="2025-12-24T02:51:54.626566" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Robot Framework keyword to delete any app from carousel/Appbar.</doc>
+<status status="PASS" start="2025-12-24T02:51:06.621679" elapsed="48.004887"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Failed to delete app</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-24T02:51:54.626566" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-24T02:51:56.635175" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-24T02:51:54.634351" elapsed="2.000824"/>
+</kw>
+<doc>Delete an app from carousel using tooltip module</doc>
+<status status="PASS" start="2025-12-24T02:51:06.620779" elapsed="50.014396"/>
+</test>
+<status status="PASS" start="2025-12-24T02:50:33.558573" elapsed="83.079181"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Hp Test" id="s1" pass="5" fail="0" skip="0">Hp Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
