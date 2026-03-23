@@ -1,5 +1,5 @@
 robotframework
 pyautogui
-pygetwindow
+PyGetWindow
 pywinauto
 pyperclip
