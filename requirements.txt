@@ -1,0 +1,5 @@
+robotframework
+pyautogui
+pygetwindow
+pywinauto
+pyperclip

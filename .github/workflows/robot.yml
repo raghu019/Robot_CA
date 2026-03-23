@@ -17,8 +17,8 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install Robot Framework
-      run: pip install robotframework
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
 
     - name: Run Tests
       run: robot -d results test/
